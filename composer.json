@@ -1,0 +1,14 @@
+{
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/wvoelcker/project"
+		}
+	],
+
+	"require": {
+		"phryneas/logged-pdo": "dev-master#8ee1264d65439200cb1b5478852f8012deef7921@dev",
+		"willv/project": "^1.0.0",
+		"robmorgan/phinx": "^0.8.0"
+	}
+}
