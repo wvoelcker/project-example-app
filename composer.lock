@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "83fc6b957eda67b545f6210e17db8b92",
-    "content-hash": "f366a167749dc44cd9b097bec3f7b5c7",
+    "hash": "581ab3e485f1a2785c8bf39d76b3505d",
+    "content-hash": "419324262c76819473c7ba5cceb65391",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -791,11 +791,8 @@
                     "WillV\\Project\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "description": "A minimal framework for PHP projects",
-            "support": {
-                "source": "https://github.com/wvoelcker/project/tree/1.0.0",
-                "issues": "https://github.com/wvoelcker/project/issues"
-            },
             "time": "2018-03-09 11:03:34"
         }
     ],
