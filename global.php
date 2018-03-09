@@ -1,6 +1,6 @@
 <?php
 use WillV\Project\View;
-use ProjectExampleApp\Config\AutoloaderSet;
+use WillV\Project\AutoloaderSet;
 use ProjectExampleApp\Config\EnvironmentList;
 
 date_default_timezone_set('UTC');
@@ -8,8 +8,9 @@ $projectRoot = realpath(__DIR__);
 
 // Set up autoloaders
 require_once $projectRoot."/vendor/autoload.php";
-require_once $projectRoot."/config/AutoloaderSet.php";
-$autoLoaderSet = AutoloaderSet::create($projectRoot);
+$autoLoaderSet = AutoloaderSet::create($projectRoot, "ProjectExampleApp", array(
+	"Config"
+));
 $autoLoaderSet->register();
 
 // Set up environment
