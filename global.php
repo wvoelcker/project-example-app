@@ -8,9 +8,7 @@ $projectRoot = realpath(__DIR__);
 
 // Set up autoloaders
 require_once $projectRoot."/vendor/autoload.php";
-$autoLoaderSet = AutoloaderSet::create($projectRoot, "ProjectExampleApp", array(
-	"Config"
-));
+$autoLoaderSet = AutoloaderSet::create($projectRoot, "ProjectExampleApp");
 $autoLoaderSet->register();
 
 // Set up environment
