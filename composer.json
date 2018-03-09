@@ -1,11 +1,4 @@
 {
-	"repositories": [
-		{
-			"type": "vcs",
-			"url": "https://github.com/wvoelcker/project"
-		}
-	],
-
 	"require": {
 		"willv/project": "^1.0.0",
 		"robmorgan/phinx": "^0.8.0"
