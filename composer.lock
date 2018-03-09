@@ -768,12 +768,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wvoelcker/project.git",
-                "reference": "dcf75334512da43542febd3e8e4b719a1a755d18"
+                "reference": "12ff71614032f7bfa95408be15ff21304f26a6f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wvoelcker/project/zipball/dcf75334512da43542febd3e8e4b719a1a755d18",
-                "reference": "dcf75334512da43542febd3e8e4b719a1a755d18",
+                "url": "https://api.github.com/repos/wvoelcker/project/zipball/12ff71614032f7bfa95408be15ff21304f26a6f6",
+                "reference": "12ff71614032f7bfa95408be15ff21304f26a6f6",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +793,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A minimal framework for PHP projects",
-            "time": "2018-03-09 11:03:34"
+            "time": "2018-03-09 14:59:37"
         }
     ],
     "packages-dev": [],
