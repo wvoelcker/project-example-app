@@ -9,7 +9,7 @@ require_once $projectRoot."/global.php";
 NoCache::create()->send();
 
 // Set up routes and route the request
-Router::create($projectRoot, $ACTIVE_ENVIRONMENT)->go(
+Router::create($APP->projectRoot, $APP->activeEnvironment)->go(
 	$_SERVER['REQUEST_METHOD'],
 	parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)
 );
