@@ -1,0 +1,6 @@
+{
+	"db-hostname": "localhost",
+	"db-database": "project-example-app",
+	"db-username": "project-example-app-production-username",
+	"db-password": "project-example-app-production-password"
+}
