@@ -9,7 +9,7 @@ require_once $projectRoot."/global.php";
 // Never cache any PHP requests from this app
 NoCache::create()->send();
 
-// Convert parse incoming JSON objects into the POST array if necessary
+// Parse incoming JSON objects into the POST array if necessary
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_POST = PostRequest::dataFromJSON();
 }
