@@ -8,7 +8,10 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 		$this->addEnvironment("development", Environment::create(
 			array(
 				"human-name" => "Development",
-				"private-setting-1" => "Private-value-1-development"
+				"db-hostname" => "localhost",
+				"db-database" => "project-example-app",
+				"db-username" => "project-example-app",
+				"db-password" => "project-example-app",
 			),
 			function() {
 				return (empty($_GET["env"]) or $_GET["env"] == "dev");
@@ -20,7 +23,7 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 				"human-name" => "Staging",
 			),
 			array(
-				__DIR__."/this-file-should-not-be-in-git-staging.json",
+				__DIR__."/database-settings-not-for-git-staging.json",
 			),
 			function() {
 				return (!empty($_GET["env"]) and $_GET["env"] == "staging");
@@ -32,7 +35,7 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 				"human-name" => "Production",
 			),
 			array(
-				__DIR__."/this-file-should-not-be-in-git-production.json",
+				__DIR__."/database-settings-not-for-git-production.json",
 			),
 			function() {
 				return (!empty($_GET["env"]) and $_GET["env"] == "production");
@@ -41,3 +44,4 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 
 	}
 }
+

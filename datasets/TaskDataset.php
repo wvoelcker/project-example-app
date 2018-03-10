@@ -1,5 +1,5 @@
 <?php
-namespace ProjectExampleApp\Domain;
+namespace ProjectExampleApp\Datasets;
 use WillV\Project\Dataset;
 
 class TaskDataset extends Dataset {
@@ -12,10 +12,10 @@ class TaskDataset extends Dataset {
 				"required" => true,
 				"visibility" => "public",
 			),
-			"is_started" => array(
+			"isStarted" => array(
 				"customValidation" => "is_bool",
 			),
-			"sortindex" => array(
+			"sortIndex" => array(
 				"customValidation" => array($this, "is_integer_or_string_containing_integer"),
 			)
 		);

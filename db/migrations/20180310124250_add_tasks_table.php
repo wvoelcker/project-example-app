@@ -30,7 +30,7 @@ class AddTasksTable extends AbstractMigration
         $table = $this->table('tasks');
         $table->addColumn('title', 'string', array('limit' => 100))
             ->addColumn('is_started', 'boolean')
-            ->addColumn('sortindex', 'integer')
+            ->addColumn('sort_index', 'integer')
             ->addColumn('created_utc', 'datetime') // Required by DataMapper
             ->addColumn('updated_utc', 'datetime', array('null' => true))  // Required by DataMapper
             ->create();

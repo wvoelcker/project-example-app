@@ -6,7 +6,11 @@ class Environment extends \WillV\Project\Environment {
 	protected function setUp() {
 		$this->requiredFields = array(
 			"human-name",
-			"private-setting-1",
+			"db-hostname",
+			"db-database",
+			"db-username",
+			"db-password"
 		);
 	}
 }
+
