@@ -206,6 +206,42 @@
             "time": "2015-07-22 20:46:43"
         },
         {
+            "name": "phryneas/logged-pdo",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phryneas/loggedPDO.git",
+                "reference": "8ee1264d65439200cb1b5478852f8012deef7921"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phryneas/loggedPDO/zipball/8ee1264d65439200cb1b5478852f8012deef7921",
+                "reference": "8ee1264d65439200cb1b5478852f8012deef7921",
+                "shasum": ""
+            },
+            "require": {
+                "pear/log": "^1.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LoggedPDO\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lorenz Weber",
+                    "email": "mail@phryneas.de"
+                }
+            ],
+            "description": "Class extending the php PDO Class for logging purpose",
+            "time": "2016-02-17 21:21:11"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -727,60 +763,24 @@
             "time": "2018-02-16 09:50:28"
         },
         {
-            "name": "willv/logged-pdo",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wvoelcker/loggedPDO.git",
-                "reference": "85114b5214bcf9413785198ea6de76952ef00943"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wvoelcker/loggedPDO/zipball/85114b5214bcf9413785198ea6de76952ef00943",
-                "reference": "85114b5214bcf9413785198ea6de76952ef00943",
-                "shasum": ""
-            },
-            "require": {
-                "pear/log": "^1.12"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LoggedPDO\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lorenz Weber",
-                    "email": "mail@phryneas.de"
-                }
-            ],
-            "description": "This is a fork of Lorenz Weber's Logged PDO Class; it is created for the purpose of having a stable release to include as a dependency of other projects without incurring composer minimum-stability errors",
-            "time": "2018-03-09 11:01:27"
-        },
-        {
             "name": "willv/project",
             "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wvoelcker/project.git",
-                "reference": "12ff71614032f7bfa95408be15ff21304f26a6f6"
+                "reference": "7dbb14e523b26c6a73410a59e5a0f5c053e3bc66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wvoelcker/project/zipball/12ff71614032f7bfa95408be15ff21304f26a6f6",
-                "reference": "12ff71614032f7bfa95408be15ff21304f26a6f6",
+                "url": "https://api.github.com/repos/wvoelcker/project/zipball/7dbb14e523b26c6a73410a59e5a0f5c053e3bc66",
+                "reference": "7dbb14e523b26c6a73410a59e5a0f5c053e3bc66",
                 "shasum": ""
             },
             "require": {
                 "mustache/mustache": "^2.9",
                 "phroute/phroute": "^2.1",
-                "swiftmailer/swiftmailer": "^5.4",
-                "willv/logged-pdo": "^1.0.0"
+                "phryneas/logged-pdo": "^1.0.0",
+                "swiftmailer/swiftmailer": "^5.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.5"
@@ -793,7 +793,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A minimal framework for PHP projects",
-            "time": "2018-03-09 14:59:37"
+            "time": "2018-03-10 09:08:41"
         }
     ],
     "packages-dev": [],
