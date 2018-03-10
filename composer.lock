@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "581ab3e485f1a2785c8bf39d76b3505d",
-    "content-hash": "419324262c76819473c7ba5cceb65391",
+    "hash": "404a27f28e78e4869f73a5cbb949ef66",
+    "content-hash": "b712a797f6d709c8be2974c9488e318d",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -764,16 +764,16 @@
         },
         {
             "name": "willv/project",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wvoelcker/project.git",
-                "reference": "7dbb14e523b26c6a73410a59e5a0f5c053e3bc66"
+                "reference": "1a85e7aa093e81f7ec818d9ca9202c9ae36756b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wvoelcker/project/zipball/7dbb14e523b26c6a73410a59e5a0f5c053e3bc66",
-                "reference": "7dbb14e523b26c6a73410a59e5a0f5c053e3bc66",
+                "url": "https://api.github.com/repos/wvoelcker/project/zipball/1a85e7aa093e81f7ec818d9ca9202c9ae36756b7",
+                "reference": "1a85e7aa093e81f7ec818d9ca9202c9ae36756b7",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +793,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "A minimal framework for PHP projects",
-            "time": "2018-03-10 09:08:41"
+            "time": "2018-03-10 18:06:35"
         }
     ],
     "packages-dev": [],

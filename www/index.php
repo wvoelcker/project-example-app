@@ -1,5 +1,6 @@
 <?php
 use WillV\Project\HTTPHeaders\NoCache;
+use WillV\Project\PostRequest;
 use ProjectExampleApp\Config\Router;
 
 $projectRoot = realpath(__DIR__."/..");
@@ -9,12 +10,8 @@ require_once $projectRoot."/global.php";
 NoCache::create()->send();
 
 // Convert parse incoming JSON objects into the POST array if necessary
-if ($_SERVER["REQUEST_METHOD"] == "POST" and empty($_POST) and $_SERVER["CONTENT_TYPE"] == "application/json") {
-	$incomingRequestBody = file_get_contents('php://input');
-	$incomingData = @json_decode($incomingRequestBody, true);
-	if (is_array($incomingData) and !empty($incomingData)) {
-		$_POST = $incomingData;
-	}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$_POST = PostRequest::dataFromJSON();
 }
 
 // Set up routes and route the request

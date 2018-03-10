@@ -1,6 +1,6 @@
 {
 	"require": {
-		"willv/project": "^1.0.0",
+		"willv/project": "^1.1.0",
 		"robmorgan/phinx": "^0.8.0"
 	}
 }
