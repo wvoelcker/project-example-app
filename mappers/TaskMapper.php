@@ -5,7 +5,7 @@ use WillV\Project\DataMapper\MySQLMapper;
 class TaskMapper extends MySQLMapper {
 
 	protected function setUp() {
-		$this->primaryDomainObject = __NAMESPACE__."\Task";
+		$this->primaryDomainObject = "\ProjectExampleApp\Domain\Task";
 		$this->primaryDatabaseTable = "tasks";
 	}
 

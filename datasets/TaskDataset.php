@@ -11,17 +11,20 @@ class TaskDataset extends Dataset {
 			"title" => array(
 				"required" => true,
 				"visibility" => "public",
+				"customValidation" => "is_string"
 			),
 			"isStarted" => array(
 				"customValidation" => "is_bool",
 			),
 			"sortIndex" => array(
+				"required" => true,
+				"visibility" => "public",
 				"customValidation" => array($this, "is_integer_or_string_containing_integer"),
 			)
 		);
 	}
 
-	private function is_integer_or_string_containing_integer($value) {
+	protected function is_integer_or_string_containing_integer($value) {
 		return ctype_digit((string)$value);
 	}
 }

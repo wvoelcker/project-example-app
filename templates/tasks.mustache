@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Tasks</title>
+		<script>
+			document.addEventListener("DOMContentLoaded", function(event) {
+				document.getElementById("new-task-form").addEventListener("submit", function(event) {
+					postData(
+						"/tasks",
+						{
+							"title": document.getElementById("title-field").value
+						}
+					)
+					.then(function(response) {
+						if (!response.title) {
+							throw new Error("No title in response");
+						}
+						var li = document.createElement("LI");
+						li.innerText = response.title;
+						document.getElementById("tasklist").appendChild(li);
+						document.getElementById("title-field").value = "";
+					});
+					event.preventDefault();
+				});
+			});
+
+			function postData(url, data) {
+				return fetch(url, {
+					body: JSON.stringify(data),
+					cache: 'no-cache',
+					headers: {
+						'content-type': 'application/json'
+					},
+					method: 'POST'
+				})
+				.then(response => response.json()) // parses response to JSON
+			}
+
+		</script>
+	</head>
+	<body>
+
+		<h2>My tasks</h2>
+		<ul id="tasklist">
+			{{#tasks}}
+			<li>{{ title }}</li>
+			{{/tasks}}
+		</ul>
+
+
+		<form action="/tasks" method="POST" id="new-task-form">
+			<fieldset>
+				<legend>Add new task</legend>
+				<p>
+					<label>Title:</label> <input name="title" type="text" id="title-field" />
+				</p>
+				<p>
+					<input type="submit" />
+				</p>
+			</fieldset>
+		</form>
+	</body>
+</html>

@@ -8,6 +8,7 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 		$this->addEnvironment("development", Environment::create(
 			array(
 				"human-name" => "Development",
+				"showExceptionsOn500Page" => true,
 				"db-hostname" => "localhost",
 				"db-database" => "project-example-app",
 				"db-username" => "project-example-app",
@@ -21,6 +22,7 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 		$this->addEnvironment("staging", Environment::create(
 			array(
 				"human-name" => "Staging",
+				"showExceptionsOn500Page" => false,
 			),
 			array(
 				__DIR__."/database-settings-not-for-git-staging.json",
@@ -33,6 +35,7 @@ class EnvironmentList extends \WillV\Project\EnvironmentList {
 		$this->addEnvironment("production", Environment::create(
 			array(
 				"human-name" => "Production",
+				"showExceptionsOn500Page" => false,
 			),
 			array(
 				__DIR__."/database-settings-not-for-git-production.json",

@@ -8,6 +8,15 @@ require_once $projectRoot."/global.php";
 // Never cache any PHP requests from this app
 NoCache::create()->send();
 
+// Convert parse incoming JSON objects into the POST array if necessary
+if ($_SERVER["REQUEST_METHOD"] == "POST" and empty($_POST) and $_SERVER["CONTENT_TYPE"] == "application/json") {
+	$incomingRequestBody = file_get_contents('php://input');
+	$incomingData = @json_decode($incomingRequestBody, true);
+	if (is_array($incomingData) and !empty($incomingData)) {
+		$_POST = $incomingData;
+	}
+}
+
 // Set up routes and route the request
 Router::create($APP->projectRoot, $APP->activeEnvironment)->go(
 	$_SERVER['REQUEST_METHOD'],
