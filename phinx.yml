@@ -1,0 +1,35 @@
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/db/migrations
+    seeds: %%PHINX_CONFIG_DIR%%/db/seeds
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+
+    development:
+        adapter: mysql
+        host: localhost
+        name: project-example-app
+        user: project-example-app-phinx
+        pass: project-example-app-phinx
+        port: 3306
+        charset: utf8
+
+    # The two tokens in the following section (and in the 'production' section) should be replaced by a git 'post-receive' hook following a deployment
+    staging:
+        adapter: mysql
+        host: localhost
+        name: project-example-app
+        user: '@@phinxuser@@'
+        pass: '@@phinxpassword@@'
+        port: 3306
+        charset: utf8
+
+    production:
+        adapter: mysql
+        host: localhost
+        name: project-example-app
+        user: '@@phinxuser@@'
+        pass: '@@phinxpassword@@'
+        port: 3306
+        charset: utf8
