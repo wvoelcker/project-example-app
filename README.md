@@ -9,6 +9,6 @@ Features demonstrated include:
   * Data mappers
   * Routing
   * Controllers
-  * 400 and 500 Errors
+  * 404 and 500 Errors
   * Response types
   * Environment config
