@@ -13,7 +13,7 @@ class TaskMapper extends MySQLMapper {
 		return array(
 			"id" => "id",
 			"title" => "title",
-			"is_started" => array(
+			"isStarted" => array(
 				function($object) {
 					return array(
 						"key" => "is_started",
